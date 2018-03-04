@@ -1,7 +1,8 @@
-ECE 422: Reliable and Secure Systems Design -- Winter 2018 
+ECE 422: Reliable and Secure Systems Design 
 =============
-Starter Kit for Reliability Project 
------
+Starter Kit for Reliability Project - Winter 2018
+-------------
+
 1. Create 3 VMs on Cybera cloud with the following specefications:
 
     1. Use **Ubuntu 16.04** as the image for all VMs.
