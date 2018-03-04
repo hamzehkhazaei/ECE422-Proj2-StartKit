@@ -24,7 +24,7 @@ the *clientVM*.
 
     4. You need to open the following TCP ports in the default security group in Cybera:
         - 22 (ssh), 2376 and 2377 (Swarm), 5000 (Visualization), 8000 (webapp), 6379 (Redis)
-        - You can do this on Cybera by going to *Network* menu and *Security Groups*. (![See Here](./figures/sg.png))
+        - You can do this on Cybera by going to *Network* menu and *Security Groups*. ([See Here](./figures/sg.png))
 
 2. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
     ```bash
