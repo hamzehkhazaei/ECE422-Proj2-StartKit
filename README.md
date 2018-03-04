@@ -2,7 +2,7 @@ ECE 422: Reliable and Secure Systems Design -- Winter 2018
 =============
 Starter Kit for Reliability Project 
 -----
-0. Create 3 VMs on Cybera cloud with the following specefications:
+1. Create 3 VMs on Cybera cloud with the following specefications:
 
     1. Use **Ubuntu 16.04** as the image for all VMs.
 
@@ -15,34 +15,34 @@ the *clientVM*.
         - 22 (ssh), 2376 and 2377 (for Swarm), 5000 (Visualization), 8000 (webapp), 6379 (for Redis)
         - You can do this on Cybera by going to *Network* menu and *Security Groups*.
 
-5. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
+2. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
     ```bash
     $ sudo apt-get update
     $ sudo apt-get -y install docker.io
     ```
     
-6. Now that Docker is installed on the two VMs, you will create the Swarm cluster. 
+3. Now that Docker is installed on the two VMs, you will create the Swarm cluster. 
     6. For the VM that you want to be your Swarm Manger you need to run:
    ```bash
        $ sudo docker swarm init
    ```
 
-6. The above _init_ command will produce something like following command that you need to run on all worker VMs.
+4. The above _init_ command will produce something like following command that you need to run on all worker VMs.
     ```bash
     $ docker swarm join \
         --token xxxxxxxxxxxxxxxxxx \
         172.17.0.2:2377
     ```
     - Above command will join your worker to the Swarm cluster.
-7. SSH to your Swarm manager and download the docker-compose.yml file:
+5. SSH to your Swarm manager and download the docker-compose.yml file:
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/docker-compose.yml
     ```
-8. Run the following to deploy your application:
+6. Run the following to deploy your application:
     ```bash
     $ sudo docker stack deploy --compose-file docker-compose.yml demo
     ```
-9. Your application consists of three microservices:
+7. Your application consists of three microservices:
     1. A visualization microservice that is used to show the Swarm cluster nodes and running microservices. 
         - Open `http://swarm_manager_ip:5000` in your browser. Note that you should have the Cybera VPN client 
     running in order to see the page.
@@ -52,7 +52,7 @@ the *clientVM*.
         hitting number increase one by one and also the computation time to change accordingly.
     3. Redis microservice which in fact doesnt do anything special and just return the number of hitting.
 
-10. Now, login into your **clientVM** and download the client program code:
+8. Now, login into your **clientVM** and download the client program code:
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/ece422_client.py
     ```
