@@ -69,10 +69,10 @@ the *clientVM*.
     ```
     - Note this is a base implementation of an HTTP client and you need to modify this according to your needs.
     - This client program creates a number of users that send requests to the server and after receiving the response
-     thinks for the amount of **think_time* and then send another request.
+     thinks for the amount of *think_time* and then send another request.
     - It calculates the *response time* for each request as well.
     - If you increase the number of users or decrease the think time, the response time should increase.
     - **Important Note**: try not to run the client on your laptop as this may appear as a DoS attack to Cybera 
     firewall which may result in unexpected outcome for your VMs. 
     
- Good Luck :+1: 
+ Good Luck!
