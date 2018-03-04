@@ -2,9 +2,8 @@ ECE 422 Instructions - Winter 2018
 ================
 First of all you need to create 3 VMs on Cybera cloud with the following specefications:
 1. Use **Ubuntu 16.04** as the image for all VMs.
-2. You need one of these VMs to run the client program for which you may use **m1.small** flavour.
-   - You will run the  `ece422_client.py`  on this VM. 
-   - Note this is a base implementation of the client and you may modify this according to your needs.
+2. You need one of these VMs to run the client program for which you may use **m1.small** flavour. Let's call this VM as
+the *clientVM*.
 3. For the other two VMs **m1.large** flavor would be a good choice. These two VMs will construct your Swarm cluster.
 4. You need to open the following TCP ports in the default security group in Cybera:
    - 22 (ssh), 2376 and 2377 (for Swarm), 5000 (Visualization), 8000 (webapp), 6379 (for Redis)
@@ -39,3 +38,11 @@ First of all you need to create 3 VMs on Cybera cloud with the following specefi
     been visited and the time that took it to solve a hard problem. 
         1. Open `http://swarm_manager_ip:8000` to see the web application. Try to refresh the app. You should see the 
         hitting number increase one by one.
+    3. Redis microservice which in fact doesnt do anything special and just return the number of hitting.
+10. Now, login into your *clientVM* and download the client program code:
+    ```bash
+    wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/ece422_client.py
+    ```
+    - Note this is a base implementation of the client and you may modify this according to your needs.
+    - This client calculate the *response time* of request for each user.
+    - If we increase the number of users, the response time will increase.
