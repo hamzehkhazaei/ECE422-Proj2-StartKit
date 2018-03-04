@@ -35,14 +35,14 @@ the *clientVM*.
 3. Now that Docker is installed on the two VMs, you will create the Swarm cluster. 
     6. For the VM that you want to be your Swarm Manger you need to run:
    ```bash
-       $ sudo docker swarm init
+   $ sudo docker swarm init
    ```
 
-4. The above _init_ command will produce something like following command that you need to run on all worker VMs.
+4. The above _init_ command will produce something like following command that you need to run on all worker nodes.
     ```bash
     $ docker swarm join \
         --token xxxxxxxxxxxxxxxxxx \
-        172.17.0.2:2377
+        swarm_manager_ip:2377
     ```
     - Above command will join your worker to the Swarm cluster.
 5. SSH to your Swarm manager and download the docker-compose.yml file:
@@ -63,9 +63,9 @@ the *clientVM*.
         hitting number increase one by one and also the computation time to change accordingly. ([Sample](./figures/app.png))
     3. Redis microservice which in fact doesnt do anything special and just return the number of hitting.
 
-8. Now, login into your **clientVM** and download the client program code:
+8. Now, login into your **clientVM** and download the http client program:
     ```bash
-    $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/ece422_client.py
+    $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/http_client.py
     ```
     - Note this is a base implementation of an HTTP client and you need to modify this according to your needs.
     - This client program creates a number of users that send requests to the server and after receiving the response
