@@ -11,7 +11,7 @@ import time
 import threading
 
 swarm_master_ip = '10.2.9.108'  # ip address of the Swarm master node
-req_interval = 1  # interval in seconds between requests (aka think time of users)
+think_time = 1  # the user think time (seconds) in between consequent requests
 no_users = 3  # number of concurrent users sending request to the server
 
 
@@ -32,7 +32,7 @@ def workload(user):
         t0 = time.time()
         requests.get('http://' + swarm_master_ip + ':8000/')
         t1 = time.time()
-        time.sleep(req_interval)
+        time.sleep(think_time)
         print("Response Time for " + user + " = " + str(t1 - t0))
 
 
