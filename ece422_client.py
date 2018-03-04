@@ -1,10 +1,4 @@
-"""
-__author__ = "Hamzeh Khazaei"
-__copyright__ = "Copyright 2018, ECE 422 Course Project"
-__license__ = "GPL"
-__version__ = "1.0"
-__status__ = "Development"
-"""
+
 
 import requests
 import time

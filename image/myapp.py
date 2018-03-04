@@ -1,19 +1,7 @@
-# Copyright 2018 Hamzeh Khazaei
-#
-#    Licensed under the Apache License, Version 2.0 (the "License"); you may
-#    not use this file except in compliance with the License. You may obtain
-#    a copy of the License at
-#
-#         http://www.apache.org/licenses/LICENSE-2.0
-#
-#    Unless required by applicable law or agreed to in writing, software
-#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-#    License for the specific language governing permissions and limitations
-#    under the License.
 
 """
-Server side program to mock a computation at server side for the project.
+A simple web application; return the number of time it has been visited and also the amount of time that took to
+run the difficult function.
 """
 
 from flask import Flask
@@ -25,21 +13,22 @@ app = Flask(__name__)
 redis = Redis(host='redis', port=6379)
 
 
-def func():
-    output = 1000
+def difficult_function():
+    output = 1
     t0 = time.time()
     difficulty = random.randint(1000000, 2000000)
     for i in range(difficulty):
         output = output * difficulty
         output = output / (difficulty - 1)
-    compute_time = time.time() - t0
+    t1 = time.time()
+    compute_time = t1 - t0
     return compute_time
 
 
 @app.route('/')
 def hello():
     count = redis.incr('hits')
-    computation_time = func()
+    computation_time = difficult_function()
     return 'Hello There! I have been seen {} times. I have solved the problem in {} seconds.\n'.format(count,
                                                                                                        computation_time)
 
