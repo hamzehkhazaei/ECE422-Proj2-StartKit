@@ -23,8 +23,8 @@ the *clientVM*.
     3. For the other two VMs, **m1.large** flavor would be a good choice. These two VMs will construct your Swarm cluster.
 
     4. You need to open the following TCP ports in the default security group in Cybera:
-        - 22 (ssh), 2376 and 2377 (for Swarm), 5000 (Visualization), 8000 (webapp), 6379 (for Redis)
-        - You can do this on Cybera by going to *Network* menu and *Security Groups*.
+        - 22 (ssh), 2376 and 2377 (Swarm), 5000 (Visualization), 8000 (webapp), 6379 (Redis)
+        - You can do this on Cybera by going to *Network* menu and *Security Groups*. ([See Here](./figures/sg.png))
 
 2. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
     ```bash
@@ -56,11 +56,11 @@ the *clientVM*.
 7. Your application consists of three microservices:
     1. A visualization microservice that is used to show the Swarm cluster nodes and running microservices. 
         - Open `http://swarm_manager_ip:5000` in your browser. Note that you should have the Cybera VPN client 
-    running in order to see the page.
+    running in order to see the page. ([Sample](./figures/vis.png))
     2. The web application which is linked to a Redis datastore. This simple application shows the number that it has 
     been visited and the time that took it to solve a hard problem. 
         - Open `http://swarm_manager_ip:8000` to see the web application. Try to refresh the app. You should see the 
-        hitting number increase one by one and also the computation time to change accordingly.
+        hitting number increase one by one and also the computation time to change accordingly. ([Sample](./figures/app.png))
     3. Redis microservice which in fact doesnt do anything special and just return the number of hitting.
 
 8. Now, login into your **clientVM** and download the client program code:
