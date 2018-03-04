@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    image: henaras/simpleweb:1
+    ports:
+      - "8000:8000"
+    deploy:
+     resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    deploy:
+     resources:  
+        limits:
+          cpus: '0.25'
+          memory: 256M
+
+  visualizer:
+    image: henaras/visualizer
+    ports:
+      - "5000:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
