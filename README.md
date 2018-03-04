@@ -1,6 +1,6 @@
 ECE 422: Reliable and Secure Systems Design 
 =============
-This repository provides the starter kit for reliability project for Winter 2018. The *docker-images* folder
+This repository provides the starter kit of reliability project. The *docker-images* folder
 contains the Dockerfile, a simple application in `Python` and a requirement file including dependencies for
 the application. This directory is for students reference as the image (simpleweb) has already been build 
 and pushed to [Docker Hub](https://hub.docker.com/r/henaras/simpleweb) repository.
@@ -75,4 +75,4 @@ the *clientVM*.
     - **Important Note**: try not to run the client on your laptop as this may appear as a DoS attack to Cybera 
     firewall which may result in unexpected outcome for your VMs. 
     
- 
+ Good Luck :+1: 
