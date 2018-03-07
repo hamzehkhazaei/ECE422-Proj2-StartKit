@@ -69,11 +69,11 @@ the **Client_VM**.
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/http_client.py
     ```
     - Open the ``http_client.py`` and set the parameters according to your application and Swarm cluster.
+    - Try to run the `http_client.py` with one user and think time of one second to test the program functionality. The
+    program should print the response time for each request.
     - Note this is a base implementation of an HTTP client and you need to modify this according to your needs.
     - This client program creates a number of users that send requests to the server and after receiving the response
      thinks for the amount of *think_time* and then send another request.
-    - It calculates the *response time* for each request as well.
-    - Try to run the `http_client.py` with one user and think time of one second to test the program functionality.
     - If you increase the number of users or decrease the think time, ie, you are increasing the workload, the response 
     time should increase.
     - **Important Note**: try not to run the client program on your laptop as this may appear as a DoS attack to Cybera 
