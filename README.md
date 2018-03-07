@@ -68,9 +68,11 @@ the **Client_VM**.
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/http_client.py
     ```
-    - Open the ``http_client.py`` and set the parameters according to your application and Swarm cluster.
-    - Try to run the `http_client.py` with one user and think time of one second to test the program functionality. The
-    program should print the response time for each request.
+    - Try to run the `http_client.py` with one user and think time of one second to test the program functionality. 
+       ```bash
+       $ python3.5 http_client.py swarm_manager_ip 1 1
+       ```
+       - The program should print the response time for each request.
     - Note this is a base implementation of an HTTP client and you need to modify this according to your needs.
     - This client program creates a number of users that send requests to the server and after receiving the response
      thinks for the amount of *think_time* and then send another request.
