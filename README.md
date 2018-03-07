@@ -78,8 +78,10 @@ the **Client_VM**.
     the response thinks for the amount of *think_time* and then send a new request.
     - If you increase the number of users or decrease the think time, ie increasing the workload, the response 
     time should increase.
-    - **Important Note**: try not to run the client program on your laptop as this may appear as a DoS attack to Cybera 
-    firewall which may result in unexpected outcome for your VMs. 
+    - **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
+    which is a reasonable strategy. However, running the client program for long time on your laptop might appear as 
+    a DoS attack to Cybera firewall which may result in unexpected outcome for your VMs. Therefor, try to run the 
+    http client program on the ``Client_VM``.
     
     
  Good Luck!
