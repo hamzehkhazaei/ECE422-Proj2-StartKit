@@ -16,16 +16,16 @@ Initial steps to accomplish your project:
 
 1. Create 3 VMs on Cybera cloud with the following specefications:
 
-    1. Use **Ubuntu 16.04** as the image for all VMs.
+    1. Use `Ubuntu 16.04` as the image for all VMs.
 
-    2. You need one of these VMs to run the client program for which you may use **m1.small** flavor. Let's call this VM as
-the **Client_VM**.
+    2. You need one of these VMs to run the client program for which you may use `m1.small` flavor. Let's call this VM as
+the `Client_VM`.
 
-    3. For the other two VMs, **m1.large** flavor would be a good choice. These two VMs will construct your Swarm cluster.
+    3. For the other two VMs, `m1.large` flavor would be a good choice. These two VMs will construct your Swarm cluster.
 
-    4. You need to open the following TCP ports in the **default security group** in Cybera:
+    4. You need to open the following TCP ports in the `default security group` in Cybera:
         - 22 (ssh), 2376 and 2377 (Swarm), 5000 (Visualization), 8000 (webapp), 6379 (Redis)
-        - You can do this on Cybera by going to **Network** menu and **Security Groups**. ([See Here](./figures/sg.png))
+        - You can do this on Cybera by going to `Network` menu and `Security Groups`. ([See Here](./figures/sg.png))
 
 2. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
     ```bash
@@ -39,7 +39,7 @@ the **Client_VM**.
     $ sudo docker swarm init
     ```
 
-    - The above _init_ command will produce something like bellow command that you need to run on all worker nodes.
+    - The above `init` command will produce something like bellow command that you need to run on all worker nodes.
     ```bash
     $ docker swarm join \
         --token xxxxxxxxxxxxxxxxxx \
@@ -64,7 +64,7 @@ the **Client_VM**.
         hitting number increases one by one and also the computation time to change each time. ([Sample](./figures/app.png))
     3. A Redis microservice which in fact doesnt do anything fancy but to return the number of hitting.
 
-8. Now, login into your **Client_VM** and download the http client program:
+8. Now, login into your `Client_VM` and download the http client program:
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/http_client.py
     ```
@@ -75,13 +75,13 @@ the **Client_VM**.
        ```
        - The program should print the response time for each request.
     - Generally, this client program creates a number of users that send requests to the server and after receiving 
-    the response thinks for the amount of *think_time* and then send a new request.
+    the response thinks for the amount of `think_time` and then send a new request.
     - If you increase the number of users or decrease the think time, ie increasing the workload, the response 
     time should increase.
     - **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
     which is a reasonable strategy. However, running the client program for a long time on your laptop might appear as 
     a DoS attack to Cybera firewall which may result in unexpected outcome for your VMs. Therefor, try to run the 
-    http client program on the ``Client_VM``.
+    http client program on the `Client_VM`.
     
     
  Good Luck!
