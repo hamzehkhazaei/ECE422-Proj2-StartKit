@@ -16,8 +16,8 @@ if len(sys.argv) < 4:
 else:
     print('Default values have be overwritten.')
     swarm_master_ip = sys.argv[1]
-    no_users = sys.argv[2]
-    think_time = sys.argv[3]
+    no_users = int(sys.argv[2])
+    think_time = float(sys.argv[3])
 
 
 class MyThread(threading.Thread):
