@@ -34,18 +34,18 @@ the `Client_VM`.
     ```
     
 3. Now that Docker is installed on the two VMs, you will create the Swarm cluster.
-    - For the VM that you want to be your Swarm Manger run:
+    1. For the VM that you want to be your Swarm Manger run:
     ```bash
     $ sudo docker swarm init
     ```
 
-    - The above `init` command will produce something like bellow command that you need to run on all worker nodes.
+    2. The above `init` command will produce something like bellow command that you need to run on all worker nodes.
     ```bash
     $ docker swarm join \
         --token xxxxxxxxxxxxxxxxxx \
         swarm_manager_ip:2377
     ```
-    - Above command will join your worker to the Swarm cluster.
+    3. Above command will join your worker to the Swarm cluster.
 5. On your Swarm manager, download the docker-compose.yml file:
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/docker-compose.yml
@@ -73,12 +73,12 @@ the `Client_VM`.
     ```bash
     $ python3.5 http_client.py swarm_manager_ip 1 1
     ```
-    - The program should print the response time for each request.
-    - Generally, this client program creates a number of users that send requests to the server and after receiving 
+    1. The program should print the response time for each request.
+    2. Generally, this client program creates a number of users that send requests to the server and after receiving 
     the response thinks for the amount of `think_time` and then send a new request.
-    - If you increase the number of users or decrease the think time, ie increasing the workload, the response 
+    3. If you increase the number of users or decrease the think time, ie increasing the workload, the response 
     time should increase.
-    - **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
+    4. **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
     which is a reasonable strategy. However, running the client program for a long time on your laptop might appear as 
     a DoS attack to Cybera firewall which may result in unexpected outcome for your VMs. Therefor, try to run the 
     http client program on the `Client_VM`.
