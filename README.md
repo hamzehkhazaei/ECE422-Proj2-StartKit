@@ -33,10 +33,10 @@ the `Client_VM`.
     $ pip install requests
     ```
 
-2. Then, you need to install *Docker* on VMs that are part of your Swarm Cluster. Run the followings on each node.
+2. Then, you need to install *Docker* on VMs that constitutes your Swarm Cluster. Run the followings on each node.
     ```bash
-    $ sudo apt-get update
-    $ sudo apt-get -y install docker.io
+    $ sudo apt update
+    $ sudo apt -y install docker.io
     ```
     
 3. Now that Docker is installed on the two VMs, you will create the Swarm cluster.
