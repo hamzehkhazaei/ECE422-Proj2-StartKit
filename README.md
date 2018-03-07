@@ -5,12 +5,14 @@ contains the Dockerfile, a simple application in `Python` and a requirement file
 the application. This directory is for your information and reference as the image (simpleweb) has already been build 
 and pushed to [Docker Hub](https://hub.docker.com/r/henaras/simpleweb) repository.
 
-Following steps show how you can prepare the deployment environment on Cybera Cloud; briefly you need to 
-1) provision Virtual Machines (VMs) on Cybera 2) install Docker on VMs 3) create a Swarm cluster of at least two of 
-VMs and 4) deploy a web application on the Swarm cluster as microservices.
+Following steps show how you can prepare the deployment environment on Cybera Cloud; briefly you need to a) provision 
+Virtual Machines (VMs) on Cybera b) install Docker on VMs c) create a Swarm cluster of at least two of 
+VMs and d) deploy a web application on the Swarm cluster as microservices.
 
 Also this repository contains a base implementation of an HTTP client program that may be customized or extended 
-according to your needs. Initial steps to accomplish your project:   
+according to your needs. 
+
+Initial steps to accomplish your project:   
 
 1. Create 3 VMs on Cybera cloud with the following specefications:
 
