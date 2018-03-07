@@ -5,10 +5,19 @@ HTTP client simulator. It simulate a number of concurrent users and calculate th
 import requests
 import time
 import threading
+import sys
 
-swarm_master_ip = '10.2.9.108'  # ip address of the Swarm master node
-think_time = 1  # the user think time (seconds) in between consequent requests
-no_users = 2  # number of concurrent users sending request to the server
+if len(sys.argv) < 4:
+    print('To few arguments; you need to specify 3 arguments.')
+    print('Default values will be used for server_ip, no of users and think time.\n')
+    swarm_master_ip = '10.2.9.108'  # ip address of the Swarm master node
+    no_users = 1  # number of concurrent users sending request to the server
+    think_time = 1  # the user think time (seconds) in between consequent requests
+else:
+    print('Default values have be overwritten.')
+    swarm_master_ip = sys.argv[1]
+    no_users = sys.argv[2]
+    think_time = sys.argv[3]
 
 
 class MyThread(threading.Thread):
