@@ -8,7 +8,7 @@ import threading
 
 swarm_master_ip = '10.2.9.108'  # ip address of the Swarm master node
 think_time = 1  # the user think time (seconds) in between consequent requests
-no_users = 3  # number of concurrent users sending request to the server
+no_users = 2  # number of concurrent users sending request to the server
 
 
 class MyThread(threading.Thread):
