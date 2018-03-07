@@ -54,15 +54,15 @@ the **Client_VM**.
     ```bash
     $ sudo docker stack deploy --compose-file docker-compose.yml app_name
     ```
-7. Your application consists of three microservices:
+7. Your deployed application should includes three microservices:
     1. A visualization microservice that is used to visualize the Swarm cluster nodes and the running microservices. 
         - Open `http://swarm_manager_ip:5000` in your browser. Note that you should have the Cybera VPN client 
     running in order to see the page. ([Sample](./figures/vis.png))
-    2. The web application which is linked to a Redis datastore. This simple application shows the number that it has 
+    2. A web application which is linked to a Redis datastore. This simple application shows the number that it has 
     been visited and the period that took it to solve a hard problem. 
         - Open `http://swarm_manager_ip:8000` to see the web application. Try to refresh the page. You should see the 
         hitting number increases one by one and also the computation time to change each time. ([Sample](./figures/app.png))
-    3. Redis microservice which in fact doesnt do anything fancy but to return the number of hitting.
+    3. A Redis microservice which in fact doesnt do anything fancy but to return the number of hitting.
 
 8. Now, login into your **Client_VM** and download the http client program:
     ```bash
