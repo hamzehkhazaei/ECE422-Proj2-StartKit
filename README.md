@@ -79,7 +79,7 @@ the **Client_VM**.
     - If you increase the number of users or decrease the think time, ie increasing the workload, the response 
     time should increase.
     - **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
-    which is a reasonable strategy. However, running the client program for long time on your laptop might appear as 
+    which is a reasonable strategy. However, running the client program for a long time on your laptop might appear as 
     a DoS attack to Cybera firewall which may result in unexpected outcome for your VMs. Therefor, try to run the 
     http client program on the ``Client_VM``.
     
