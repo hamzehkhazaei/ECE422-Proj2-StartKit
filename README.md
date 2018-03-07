@@ -2,15 +2,15 @@ ECE 422: Reliable and Secure Systems Design
 =============
 This repository provides the starter kit for the Reliability project. The `docker-images` folder
 contains the Dockerfile, a simple application in `Python` and a requirement file including dependencies for
-the application. This directory is for students reference as the image (simpleweb) has already been build 
+the application. This directory is for your information and reference as the image (simpleweb) has already been build 
 and pushed to [Docker Hub](https://hub.docker.com/r/henaras/simpleweb) repository.
 
-Following steps show how students can prepare the deployment environment on Cybera Cloud; briefly students need to 
+Following steps show how you can prepare the deployment environment on Cybera Cloud; briefly you need to 
 1) provision Virtual Machines (VMs) on Cybera 2) install Docker on VMs 3) create a Swarm cluster of at least two of 
 VMs and 4) deploy a web application on the Swarm cluster as microservices.
 
-Also this repository contains a base implementation of a HTTP client program that may be customized or extended as one 
-of the final project deliveries. Initial steps to accomplish your project:   
+Also this repository contains a base implementation of an HTTP client program that may be customized or extended 
+according to your needs. Initial steps to accomplish your project:   
 
 1. Create 3 VMs on Cybera cloud with the following specefications:
 
