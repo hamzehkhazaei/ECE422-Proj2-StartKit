@@ -34,12 +34,12 @@ the **Client_VM**.
     ```
     
 3. Now that Docker is installed on the two VMs, you will create the Swarm cluster. 
-   1. For the VM that you want to be your Swarm Manger run:
+    - For the VM that you want to be your Swarm Manger run:
     ```bash
     $ sudo docker swarm init
     ```
 
-   2. The above _init_ command will produce something like bellow command that you need to run on all worker nodes.
+    - The above _init_ command will produce something like bellow command that you need to run on all worker nodes.
     ```bash
     $ docker swarm join \
         --token xxxxxxxxxxxxxxxxxx \
