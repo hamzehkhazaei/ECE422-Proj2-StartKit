@@ -68,12 +68,12 @@ the `Client_VM`.
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/http_client.py
     ```
-    - Then run the `http_client.py` program with one user who sends a request, wait for the response, thinks for one second 
-    and send a new next request. 
-       ```bash
-       $ python3.5 http_client.py swarm_manager_ip 1 1
-       ```
-       - The program should print the response time for each request.
+9. Then run the `http_client.py` program with one user who sends a request, wait for the response, thinks for one second 
+   and send a new next request. 
+    ```bash
+    $ python3.5 http_client.py swarm_manager_ip 1 1
+    ```
+    - The program should print the response time for each request.
     - Generally, this client program creates a number of users that send requests to the server and after receiving 
     the response thinks for the amount of `think_time` and then send a new request.
     - If you increase the number of users or decrease the think time, ie increasing the workload, the response 
