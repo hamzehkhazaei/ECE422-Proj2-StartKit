@@ -33,7 +33,7 @@ the **Client_VM**.
     $ sudo apt-get -y install docker.io
     ```
     
-3. Now that Docker is installed on the two VMs, you will create the Swarm cluster. 
+3. Now that Docker is installed on the two VMs, you will create the Swarm cluster.
     - For the VM that you want to be your Swarm Manger run:
     ```bash
     $ sudo docker swarm init
