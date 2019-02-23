@@ -12,7 +12,7 @@ VMs and d) deploy a web application on the Swarm cluster as microservices.
 Also this repository contains a base implementation of an HTTP client program that may be customized or extended 
 according to your needs. 
 
-Initial steps to accomplish your project:   
+Initial steps for accomplishing your project:   
 
 1. Create 3 VMs on Cybera cloud with the following specefications:
 
