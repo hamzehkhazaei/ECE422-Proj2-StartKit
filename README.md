@@ -21,7 +21,7 @@ Initial steps for accomplishing your project:
     2. You need one of these VMs to run the client program for which you may use `m1.small` flavor. Let's call this VM as
 the `Client_VM`.
 
-    3. For the other two VMs, `m1.large` flavor would be a good choice. These two VMs will construct your Swarm cluster.
+    3. For the other two VMs, `m1.large` or `m1.medium` flavor would be a good choice. These two VMs will construct your Swarm cluster.
 
     4. You need to open the following TCP ports in the `default security group` in Cybera:
         - 22 (ssh), 2376 and 2377 (Swarm), 5000 (Visualization), 8000 (webapp), 6379 (Redis)
@@ -33,13 +33,13 @@ the `Client_VM`.
     $ pip install requests
     ```
 
-2. Then, you need to install *Docker* on VMs that constitutes your Swarm Cluster. Run the followings on each node.
+3. Then, you need to install *Docker* on VMs that constitutes your Swarm Cluster. Run the followings on each node.
     ```bash
     $ sudo apt update
     $ sudo apt -y install docker.io
     ```
     
-3. Now that Docker is installed on the two VMs, you will create the Swarm cluster.
+4. Now that Docker is installed on the two VMs, you will create the Swarm cluster.
     1. For the VM that you want to be your Swarm Manger run:
     ```bash
     $ sudo docker swarm init
