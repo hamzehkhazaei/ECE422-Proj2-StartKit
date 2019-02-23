@@ -51,7 +51,7 @@ the `Client_VM`.
         --token xxxxxxxxxxxxxxxxxx \
         swarm_manager_ip:2377
     ```
-    3. Above command will join your worker to the Swarm cluster.
+    3. Above command attaches your worker to the Swarm cluster.
 5. On your Swarm manager, download the docker-compose.yml file:
     ```bash
     $ wget https://raw.githubusercontent.com/hamzehkhazaei/ECE422-Proj2-StartKit/master/docker-compose.yml
@@ -85,7 +85,7 @@ the `Client_VM`.
     the response thinks for the amount of `think_time` and then send a new request.
     3. If you increase the number of users or decrease the think time, ie increasing the workload, the response 
     time should increase.
-    4. **Important Note**: for development and testing purposes you may want to run the client program on your laptop 
+    4. **Important Note**: for development and testing purposes you may run the client program on your laptop 
     which is a reasonable strategy. However, running the client program for a long time on your laptop might appear as 
     a DoS attack to Cybera firewall which may result in unexpected outcome for your VMs. Therefor, try to run the 
     http client program on the `Client_VM`.
